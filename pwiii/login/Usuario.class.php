@@ -7,15 +7,15 @@ class Usuario{
     private $pdo;
 
     public function __construct(){
-        $dns    = "mysql:dbname=Usuario;host=localhost"; 
+        $dns    = "mysql:dbname=Usuarioetimpwiii;host=localhost"; 
         $dbUser = "root";
         $dbPass = "";
         try {
             $this->pdo = new PDO($dns, $dbUser, $dbPass);
-            echo "<h1>Conectado ao banco! Seu Lindao ^^</h1>";
+            //echo "<script>alert('Conectado ao banco! Seu lindão ^^');</script>";
             return true;
         } catch (\Throwable $th) {
-            echo "<h1>Erro ao conectar ao banco! burrinho! :P</h1>";
+            //echo "<script>alert('Erro ao conectar ao banco! Burrinho! :P');</script>";
             return false;
         }
        

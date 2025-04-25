@@ -33,7 +33,7 @@ if( $sucesso ){
 
         <input type="text" name="name" placeholder="Digite um nome">
         <input type="text" name="email" placeholder="Digite um email">
-        <input type="text" name="senha" placeholder="Digite um senha">
+        <input type="password" name="senha" placeholder="Digite um senha">
 
     <input class="botao" type="submit" value="Cadastrar">
 

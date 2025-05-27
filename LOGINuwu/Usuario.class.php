@@ -9,7 +9,7 @@ class Usuario{
     public function __construct(){
         $dns    = "mysql:dbname=usuarioetimpwiii;host=localhost"; 
         $dbUser = "root";
-        $dbPass = "";
+        $dbPass = "12345678";
         
         try {
             $this->pdo = new PDO($dns, $dbUser, $dbPass);           
@@ -90,5 +90,30 @@ class Usuario{
         return $dados;
 
     }
+
+    public function excluirUsuario($id) {
+        $sql = "DELETE FROM usuarios WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql); // <- corrigido aqui
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }    
+
+    public function getUsuarioById($id) {
+        $sql = "SELECT * FROM usuarios WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public function atualizarUsuario($id, $nome, $email, $senha) {
+        $sql = "UPDATE usuarios SET nome = :n, email = :e, senha = :s WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':n', $nome);
+        $stmt->bindParam(':e', $email);
+        $stmt->bindParam(':s', $senha);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }      
 
 }

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --vampire-black: #0E0204;
+  --wine-red: #A30E2B;
+  --pink-lavender: #DFBBCA;
+  --twilight-lavender: #774972;
+  --old-lavender: #7C5D72;
+  --font-main: 'Playfair Display', serif;
+}
+
+@font-face {
+    font-family: 'Royal';
+    src: url('../fonts/royal/RoyalChapter-Zp5Ez.otf') format('opentype');
+}
+
+html, body {
+    background-image: url('../images/fundoestrela.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+}
+
+.container {
+    background-color: rgb(124, 93, 114, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0 0 20px #A30E2B;
+}
+
+.text {
+    background-color: #A30E2B;
+    margin: 0;
+    height: 80px;
+    border-radius: 20 20 20 20;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 52px;
+    font-family:  'Royal', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.table {
+    color: white;
+    border-radius: 15px;
+}
+
+.table thead th {
+    background-color:#0E0204;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #A30E2B;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #DFBBCA;
+    color: #0E0204;
+    transition: 0.5s ease; 
+}
+
+.btn-primary {
+    background-color: #774972;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #DFBBCA;
+    color: #0E0204;
+    transition: 0.5s ease; 
+}

@@ -25,6 +25,8 @@ if(isset($_POST['cadastrar'])){
             $exito = $usuario->cadastrar($nome, $email, $senha);
             if($exito){
                 echo "<script>confirm('Usuario inserido com sucesso!')</script>";
+                header("Location: mostrar_registros.php");
+                exit();
             } else{
                 echo "<script>confirm('Erro ao cadastrar. Tente novamente mais tarde!')</script>";
             }

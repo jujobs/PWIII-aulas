@@ -4,6 +4,5 @@ USE bancosjubs;
 CREATE TABLE IF NOT EXISTS usuarios (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(255) NOT NULL UNIQUE,
-  senha VARCHAR(255) NOT NULL,         -- armazena hash via password_hash()
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  senha VARCHAR(255) NOT NULL,   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
